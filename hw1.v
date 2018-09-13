@@ -1,11 +1,10 @@
-// Anusha Datar
 module demorgan
 (
-  input  A,          // Single bit inputs
+  input  A,          // Single bit inputs.
   input  B,
-  output nA,         // Output intermediate complemented inputs
+  output nA,         // Output intermediate complemented inputs.
   output nB,
-  output nAandnB,     // Single bit output, (~A)*(~B)
+  output nAandnB,     // Single bit output, (~A)*(~B).
   output nAornB,
   output AorB,
   output AandB,
@@ -21,13 +20,17 @@ module demorgan
   wire nAorB;
   wire nAandB;
 
-  not Ainv(nA, A);  	// Top inverter is named Ainv, takes signal A as input and produces signal nA
+  // Inverts both elements.
+  not Ainv(nA, A);  	// Top inverter is named Ainv, takes signal A as input and produces signal nA.
   not Binv(nB, B);
-  or or1(AorB, A, B);
-  and and1(AandB, A, B);
-  and andgate(nAandnB, nA, nB); 	// AND gate produces nAandnB from nA and nB
-  or or2(nAornB, nA, nB); // OR gate produces nAornB from nA and nB
-  not andinv(nAandB, AandB);
-  not orinv(nAorB, AorB);
+  // Standard and/or gates for inputs.
+  or orAB(AorB, A, B);
+  and andAB(AandB, A, B);
+  // Both inverted gates.
+  and andnAnB(nAandnB, nA, nB); 	// AND gate produces nAandnB from nA and nB.
+  or ornAnB(nAornB, nA, nB); // OR gate produces nAornB from nA and nB.
+  // Inversions of standard gates.
+  not andABinv(nAandB, AandB);
+  not orABinv(nAorB, AorB);
 
 endmodule

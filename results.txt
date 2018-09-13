@@ -1,6 +1,5 @@
 Anusha Datar
-Comparch Homework 0
-
+DeMorgan's Law states that Not A and Not B is equal to Not (A or B), so the following two truth tables should be equivalent.
 Not A and Not B
 A B | ~A ~B | ~A~B 
 0 0 |  1  1 |   1  
@@ -13,6 +12,7 @@ A B | A + B | ~(A+B)
 0 1 |   1   |    0  
 1 0 |   1   |    0  
 1 1 |   1   |    0  
+DeMorgan's Law also states that Not A or Not B is equal to Not (A and B), so the following truth tables should be equivalent as well.
 Not A or Not B
 A B | ~A ~B | ~A+~B
 0 0 |  1  1 |   1  
@@ -24,5 +24,4 @@ A B | A*B | ~(AB)
 0 0 |  0  |   1  
 0 1 |  0  |   1  
 1 0 |  0  |   1  
-1 1 |  1  |   0  
-
+1 1 |  1  |   0 
