@@ -1,0 +1,28 @@
+Anusha Datar
+Comparch Homework 0
+
+Not A and Not B
+A B | ~A ~B | ~A~B 
+0 0 |  1  1 |   1  
+0 1 |  1  0 |   0  
+1 0 |  0  1 |   0  
+1 1 |  0  0 |   0  
+Not (A or B)
+A B | A + B | ~(A+B)
+0 0 |   0   |    1  
+0 1 |   1   |    0  
+1 0 |   1   |    0  
+1 1 |   1   |    0  
+Not A or Not B
+A B | ~A ~B | ~A+~B
+0 0 |  1  1 |   1  
+0 1 |  1  0 |   1  
+1 0 |  0  1 |   1  
+1 1 |  0  0 |   0  
+Not (A and B)
+A B | A*B | ~(AB)
+0 0 |  0  |   1  
+0 1 |  0  |   1  
+1 0 |  0  |   1  
+1 1 |  1  |   0  
+
